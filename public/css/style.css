@@ -1,0 +1,7 @@
+
+.nav-item{
+    margin-right: 20px;
+}
+.nav-item a:hover {
+    background-color: #5cb85c;
+}
