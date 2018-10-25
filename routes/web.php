@@ -27,7 +27,7 @@ Route::get('/','PostController@home')->name('home');
 
 Route::get('/about','PostController@about')->name('about');
 
-Route::get('/question','PostController@questions')->name('question');
+Route::get('/question','QueryController@questions')->name('question');
 
 
 Route::get('/adminlogin','AdminController@login')->name('admin-login');
@@ -51,7 +51,7 @@ Route::post('/admin/category/{id}/edit','CategoryController@update');
 Route::get('/{id}/question',function($id){
 
       $category =Category::where('id',$id)->firstOrFail();
-       foreach ($category->questions as $question) {
+           foreach ($category->questions as $question) {
            echo $question->questions,'<br>';
        }
 });

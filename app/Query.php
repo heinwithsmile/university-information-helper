@@ -15,8 +15,8 @@ class Query extends Model
         'answers',
         'answer_file',
     ];
-    public function category() {
-        return $this->belongsTo(Category::class);
-    }
 
+    public function categories() {
+        return $this->belongsToMany('App\Category','id');
+    }
 }

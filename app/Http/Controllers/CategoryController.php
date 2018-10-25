@@ -61,7 +61,8 @@ class categoryController extends Controller
      */
     public function edit($id)
     {
-        echo $id;
+        $category = Category::whereId($id)->firstOrFail();
+        return view('admin.edit-category');
 
     }
 

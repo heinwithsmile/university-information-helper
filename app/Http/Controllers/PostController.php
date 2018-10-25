@@ -27,12 +27,7 @@ class PostController extends Controller
     {
         return view('about');
     }
-    public function questions()
-    {
-        $categories = Category::all();
-        return view('question',compact('categories'));
 
-    }
 
     /**
      * Show the form for creating a new resource.

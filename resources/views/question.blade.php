@@ -8,20 +8,46 @@
         <div class="row">
             <div class="col-md-4 mt-3">
                 <div class="list-group text-dark" id="myList" role="tablist">
-                    @foreach($categories as $category)
-                    <a class="list-group-item list-group-item-action " id="list-home-list"  data-toggle="collapse" data-target="#expandable" href="#home" role="tab"><i class="fa fa-home"></i> &nbsp {{$category->categoryName}}</a> <!---<i class="fa fa-caret-down"></i>------>
-                    <div id="expandable" class="collapse">
-                        <div class="list-group" id="mylist1">
+                    @foreach ($categories as $category)
+                        <a class="list-group-item list-group-item-action " href="{{ route('question', ['category' => $category->id]) }}"> <i class="fa fa-home"></i> &nbsp{{ $category->categoryName }}</a>
 
-                        </div>
-                    </div>
-                        @endforeach
+                    @endforeach
                 </div>
             </div>
             <!-- Tab panes -->
             <div class="col-md-8 mt-3">
+                <div class="list-group text-dark" id="" role="">
+                    @forelse ($questions as $question)
+                        <a class="list-group-item list-group-item-action "  data-toggle="modal" data-target="#{{ $question->id }}" href="">
+                            <i class="fa fa-tag"></i> &nbsp{{ $question->questions }}
+                        </a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="{{ $question->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalCenterTitle">{{ $question->questions }}</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        {{ $question->answers }}
 
-                <div class="tab-content">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    @empty
+                        <div style="text-align: left">No items found</div>
+                    @endforelse
+                </div>
+                   <div class="tab-content">
                     <div class="tab-pane " id="profile" role="tabpanel">
                         <ul class="list-group">
 
