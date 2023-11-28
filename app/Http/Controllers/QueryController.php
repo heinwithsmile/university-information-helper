@@ -56,7 +56,7 @@ class QueryController extends Controller
             'answer_file' => $filename,
         ]);
 
-        return redirect('http://hellochatbot.org/admin/add')->with('status', 'Successfully');
+        return redirect('admin/add')->with('status', 'Successfully');
 
     }
 

@@ -1,4 +1,3 @@
-
 <div class="container-fluid bg-primary sticky-top">
     <nav class="container-fluid navbar  navbar-expand-lg navbar-light navbar-toggleable-sm">
         <a class="navbar-brand text-white" href="#">TTU Chatbot</a>
@@ -9,7 +8,7 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto ">
                 <li class="nav-item active ">
-                    <a class="nav-link text-white " href="{{route('dashboard')}}"><i class="fa fa-dashboard fa-lg" aria-hidden="true"></i> Dashboard<span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-white " href="{{route('dashboard')}}"><i class="fa-solid fa-chart-line"></i> Dashboard<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ml-2">
                     <a class="nav-link text-white" href="{{route('category')}}"><i class="fa fa-file fa-lg" aria-hidden="true"></i> Add Category</a>

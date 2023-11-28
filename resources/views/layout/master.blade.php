@@ -14,8 +14,8 @@
 	<link rel="stylesheet"  href="{!!asset('/css/bootstrap-reboot.min.css')!!}">
 	<link rel="stylesheet"  href="{!!asset('/css/bootstrap.css')!!}">
 	<link rel="stylesheet"  href="{!!asset('/css/bootstrap.min.css')!!}">
-	<link rel="stylesheet"  href="{!!asset('/fonts/font-awesome.css')!!}">
-	<link rel="stylesheet"  href="{!!asset('/fonts/font-awesome.min.css')!!}">
+	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">	
+	<!-- <link rel="stylesheet"  href="{!!asset('/fonts/font-awesome.min.css')!!}"> -->
 
 </head>
 @yield('navigation')
